@@ -1,0 +1,17 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate a sample dataset
+np.random.seed(0)
+ages = np.random.randint(1, 100, size=1000)
+data = pd.DataFrame(ages, columns=['Age'])
+
+# Plot the histogram
+plt.figure(figsize=(10, 6))
+plt.hist(data['Age'], bins=20, edgecolor='k', alpha=0.7)
+plt.title('Distribution of Ages in a Population')
+plt.xlabel('Age')
+plt.ylabel('Frequency')
+plt.grid(axis='y', alpha=0.75)
+plt.show()
